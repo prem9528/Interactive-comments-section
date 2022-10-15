@@ -173,21 +173,18 @@ function newCmtAdd() {
 
 function deletCmt() {
     let deleteIcon = document.querySelectorAll('.delete-icon')
-    console.log(deleteIcon);
     deleteIcon.forEach((del) => {
-        // console.log(del);
-        // console.log(i);
 
         del.addEventListener('click', (e) => {
             let id = del.classList[1];
             if (e.target) {
-                // if (confirm('Are You Sure?')) {
-                var li = e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
-                li.parentNode.removeChild(li);
-                // }
+                if (confirm('Are You Sure?')) {
+                    var li = e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
+                    li.parentNode.removeChild(li);
+                    mydata.comments = mydata.comments.filter((ele) => ele.id != id)
+                }
             }
         })
 
     })
-    // appendData(mydata)
 }
