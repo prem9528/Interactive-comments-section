@@ -30,7 +30,7 @@ function createMessage(element) {
                 <img src="./images/icon-plus.svg" alt="icon-plus" >
             </div>
             <div>
-                <p class="like-count" id="like-count${element.id}">${element.score}</p>
+                <p class="like-count" id="like-count${element.id}">${0}</p>
             </div>
             <div class='minus-btn ${element.id}'>
                 <img src="./images/icon-minus.svg" alt="icon-minus" >
@@ -55,26 +55,15 @@ function createMessage(element) {
                       <div>
                      <p class="user-cmt">${element.content}</p>
                      </div>
-                          
-                     
-                     </div>
-                             
-                           
-                           
-                           </div>
-       
-    
-     
-     
-                     
-                  </div>`)
-    }
-    else {
+                    </div>
+                 </div> 
+               </div>`
+               )
+            } else {
 
-
-        return (
-            `<div>
-        <div class="comment-box">
+                    return (
+                            `<div>
+       <div class="comment-box">
         <div class="like-box">
             <div class='plus-btn ${element.id}'>
                 <img src="./images/icon-plus.svg" alt="icon-plus" >
@@ -104,8 +93,7 @@ function createMessage(element) {
         </div>
         </div>
         
-    </div>
-`
+    </div>`
         )
     }
 }
